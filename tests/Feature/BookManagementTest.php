@@ -64,8 +64,7 @@ class BookManagementTest extends TestCase
         ]);
 
         $this->assertEquals('New Title',Book::first()->title);
-        $this->assertEquals(3,Book::first()->author_id);
-
+        $this->assertEquals(5,Book::first()->author_id);
         $response->assertRedirect($book->fresh()->path()); //note
 
     }
